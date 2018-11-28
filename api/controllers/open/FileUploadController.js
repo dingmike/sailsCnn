@@ -150,6 +150,8 @@ module.exports = {
                   var s_width=config.s_width||120;var s_height=config.s_height||140;
                   var m_width=config.m_width||300;var m_height=config.m_height||300;
                   var s_src =sails.config.system.AppBase + sails.config.system.UploadPath + "/image/" + moment().format("YYYYMMDD") + file.substring(0,file.lastIndexOf('.'))+"_s"+suffix;
+                  console.log("----------------------------------==========================s")
+                  console.log(s_src)
                   var m_src =sails.config.system.AppBase + sails.config.system.UploadPath + "/image/" + moment().format("YYYYMMDD") + file.substring(0,file.lastIndexOf('.'))+"_m"+suffix;
                   imageMagick(fd)
                     .resize(s_width, s_height, '!') //加('!')强行把图片缩放成对应尺寸150*150！
